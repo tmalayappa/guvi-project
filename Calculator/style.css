@@ -1,0 +1,143 @@
+        .calculator {
+            width: 100%;
+            max-width: 384px; /* Increased max-width for larger screens */
+            margin: 0 auto;
+            border: 1px solid #e2e8f0; /* border-gray-200 */
+            border-radius: 0.5rem;  /* rounded-lg */
+            padding: 1rem;            /* p-4 */
+            background-color: #f7fafc;  /* bg-gray-100 */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+        }
+
+        .display {
+            width: 100%;
+            padding: 0.75rem 1rem;      /* py-3 px-4 */
+            margin-bottom: 1rem;         /* mb-4 */
+            font-size: 1.5rem;         /* text-2xl */
+            text-align: right;
+            background-color: #ffffff;  /* bg-white */
+            border: 1px solid #e2e8f0;  /* border-gray-200 */
+            border-radius: 0.375rem;  /* rounded-md */
+            overflow: hidden;          /* Ensure long numbers don't overflow */
+            word-wrap: break-word;      /* Handle very long numbers */
+            min-height: 2.75rem;       /* Ensure display doesn't collapse when empty. */
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;            /* gap-2 */
+        }
+        .button {
+             padding: 0.75rem 0;       /* py-3  */
+            font-size: 1.25rem;     /* text-xl */
+            text-align: center;
+            border: 1px solid #e2e8f0;  /* border-gray-200 */
+            border-radius: 0.375rem;  /* rounded-md */
+            cursor: pointer;
+            transition: background-color 0.2s ease; /* Smooth transition */
+            background-color: #ffffff;
+            color: #4a5568;
+        }
+
+      .button:hover {
+            background-color: #edf2f7;  /* hover:bg-gray-100 */
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);  /* hover:shadow-sm */
+      }
+      .number, .decimal {
+          background-color: #ffffff;
+          color: #4a5568;
+      }
+      .number:hover, .decimal:hover{
+         background-color: #edf2f7;
+      }
+
+      .operator {
+            background-color: #f59e0b;  /* orange-500 */
+            color: #ffffff;
+        }
+
+       .operator:hover {
+            background-color: #ed8936;  /* hover:bg-orange-600 */
+        }
+        .equals {
+            background-color: #48bb78; /* bg-green-500 */
+            color: #ffffff;
+        }
+        .equals:hover {
+             background-color: #38a169; /* hover:bg-green-600 */
+        }
+
+        .clear {
+            background-color: #e53e3e;  /* bg-red-500 */
+            color: #ffffff;
+        }
+
+        .clear:hover {
+            background-color: #c53030;  /* hover:bg-red-600 */
+        }
+
+        #test-suite {
+            margin-top: 2rem;           /* mt-8 */
+            padding: 1rem;             /* p-4 */
+            border: 1px solid #e2e8f0;  /* border-gray-200 */
+            border-radius: 0.5rem;  /* rounded-lg */
+            background-color: #f7fafc;  /* bg-gray-100 */
+        }
+
+        #test-suite h2 {
+            font-size: 1.5rem;         /* text-2xl */
+            margin-bottom: 1rem;         /* mb-4 */
+            color: #4a5568;
+        }
+
+        #test-results {
+            margin-top: 1rem;         /* mt-4 */
+            padding: 1rem;           /* p-4 */
+            border: 1px solid #cbd5e0;  /* border-gray-400 */
+            border-radius: 0.375rem;  /* rounded-md */
+            background-color: #ffffff;  /* bg-white */
+            font-family: monospace;
+            font-size: 0.875rem;      /* text-sm */
+            line-height: 1.5rem;        /* leading-relaxed */
+        }
+
+        #test-results p {
+            margin-bottom: 0.75rem;      /* mb-3 */
+        }
+
+        #test-results p.pass {
+            color: #22c55e;          /* text-green-500 */
+        }
+
+        #test-results p.fail {
+            color: #ef4444;          /* text-red-500 */
+        }
+        @media (max-width: 480px) {
+        .calculator {
+            max-width: 100%; /* Make calculator full width on small screens */
+            padding: 1rem;
+        }
+        .display{
+            font-size: 1.25rem;
+            padding: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .buttons {
+            gap: 0.25rem;
+        }
+        .button{
+            font-size: 1rem;
+            padding: 0.5rem 0;
+        }
+        #test-suite h2{
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        #test-results{
+            font-size: 0.75rem;
+            padding: 0.5rem;
+            line-height: 1.2rem;
+
+        }
+    }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    </head>
+
+
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen py-8">
+        <h1 id="title">Calculator</h1>
+        <p id="description">A simple web calculator.</p>
+        <div class="calculator">
+            <input type="text" id="result" class="display" value="0" readonly>
+            <div class="buttons">
+                <button id="clear" class="button clear" onclick="clearDisplay()">C</button>
+                <button id="7" class="button number" onclick="appendNumber('7')">7</button>
+                <button id="8" class="button number" onclick="appendNumber('8')">8</button>
+                <button id="9" class="button number" onclick="appendNumber('9')">9</button>
+                <button id="multiply" class="button operator" onclick="appendOperator('*')">×</button>
+                <button id="4" class="button number" onclick="appendNumber('4')">4</button>
+                <button id="5" class="button number" onclick="appendNumber('5')">5</button>
+                <button id="6" class="button number" onclick="appendNumber('6')">6</button>
+                <button id="subtract" class="button operator" onclick="appendOperator('-')">-</button>
+                <button id="1" class="button number" onclick="appendNumber('1')">1</button>
+                <button id="2" class="button number" onclick="appendNumber('2')">2</button>
+                <button id="3" class="button number" onclick="appendNumber('3')">3</button>
+                <button id="add" class="button operator" onclick="appendOperator('+')">+</button>
+                <button id="decimal" class="button decimal" onclick="appendDecimal()">.</button>
+                <button id="0" class="button number" onclick="appendNumber('0')">0</button>
+                <button id="equal" class="button equals" onclick="calculate()">=</button>
+                <button id="divide" class="button operator" onclick="appendOperator('/')">÷</button>
+                <button id="memory-add" class="button" onclick="toggleMemoryStore()">M+</button>
+            </div>
+            <div id="test-suite" class="mt-8">
+                <h2 class="text-2xl font-semibold mb-4">Test Suite</h2>
+                <div id="test-results" class="mt-4">
+                </div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+        <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+    </body>
+
+</html>
