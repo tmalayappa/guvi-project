@@ -1,0 +1,14 @@
+Q1. you are tasked to create a product catalog system . where user can add a product and display a product catalog. Design a Spring Data JPA entity for a product catalog. Include attributes for product name, price, and category. Implement a repository method to fetch all products of a specific category.
+Steps :
+•	The first restful URL should display the html page where Two option should be there i.e 1. Add product 2.Display product . where user can choose.
+•	If a user clicks on Add product then should display the html page (product Info form where user can enter name , price and category . and users can click one submit button.
+•	If a user clicks on Display product All product information should Display on webpage in tabular format .
+•	In backend use Spring Data JPA to create the necessary entity, repository, and service classes to store product information in a database.
+
+
+Q2. You are tasked with developing a web application that allows users to submit their feedback through a web form. The feedback data should be stored in a MySQL database, and upon successful storage, the application should respond with "feedback saved!"
+Steps :
+•	The first restful URL should display the html page where the user can enter name Book name and feedback . and user can click one submit button.
+•	Create a one servlet class (e.g., FeedbackServlet) that extends HttpServlet
+•	override dopost method and store the feedback to the mysql (use Jdbc API to store Information)
+•	In a response display "feedback saved" .
