@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full bg-white p-8 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105">
+        <div class="text-center">
+            <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+                Product Details
+            </h2>
+        </div>
+        <div class="mt-8 space-y-4 text-gray-700">
+            <div class="flex justify-between items-center pb-2 border-b border-gray-200">
+                <span class="font-semibold text-lg">ID:</span>
+                <span th:text="${product.id}" class="text-md"></span>
+            </div>
+            <div class="flex justify-between items-center pb-2 border-b border-gray-200">
+                <span class="font-semibold text-lg">Name:</span>
+                <span th:text="${product.name}" class="text-md"></span>
+            </div>
+            <div class="flex justify-between items-center pb-2 border-b border-gray-200">
+                <span class="font-semibold text-lg">Price:</span>
+                <span th:text="${#numbers.formatCurrency(product.price)}" class="text-md"></span>
+            </div>
+            <div class="flex justify-between items-center pb-2">
+                <span class="font-semibold text-lg">Category:</span>
+                <span th:text="${product.category}" class="text-md"></span>
+            </div>
+        </div>
+        <div class="mt-8 flex flex-col space-y-3">
+            <a th:href="@{/edit/{id}(id=${product.id})}"
+               class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out transform hover:-translate-y-1">
+                Edit Product
+            </a>
+            <a th:href="@{/display}"
+               class="w-full flex justify-center py-3 px-4 border-2 border-gray-300 rounded-md shadow-sm text-lg font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out transform hover:-translate-y-1">
+                Back to List
+            </a>
+        </div>
+    </div>
+</body>
+</html>
